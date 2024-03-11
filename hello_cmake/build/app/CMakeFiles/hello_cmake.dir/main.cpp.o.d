@@ -1,6 +1,8 @@
-CMakeFiles/hello_cmake.dir/main.cpp.o: \
- /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/9/iostream \
+app/CMakeFiles/hello_cmake.dir/main.cpp.o: \
+ /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/app/main.cpp \
+ /usr/include/stdc-predef.h \
+ /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/lib/say_hello.hpp \
+ /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \

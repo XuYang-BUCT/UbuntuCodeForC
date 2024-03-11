@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/main.cpp" "CMakeFiles/hello_cmake.dir/main.cpp.o" "gcc" "CMakeFiles/hello_cmake.dir/main.cpp.o.d"
+  "/home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/lib/say_hello.cpp" "lib/CMakeFiles/say_hello.dir/say_hello.cpp.o" "gcc" "lib/CMakeFiles/say_hello.dir/say_hello.cpp.o.d"
   )
 
 # Targets to which this target links.

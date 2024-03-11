@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build/CMakeFiles /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build/CMakeFiles /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build/app//CMakeFiles/progress.marks
+	cd /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,44 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named say_hello
+# Convenience name for target.
+app/CMakeFiles/hello_cmake.dir/rule:
+	cd /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/hello_cmake.dir/rule
+.PHONY : app/CMakeFiles/hello_cmake.dir/rule
 
-# Build rule for target.
-say_hello: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 say_hello
-.PHONY : say_hello
-
-# fast build rule for target.
-say_hello/fast:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/say_hello.dir/build.make lib/CMakeFiles/say_hello.dir/build
-.PHONY : say_hello/fast
-
-#=============================================================================
-# Target rules for targets named hello_cmake
-
-# Build rule for target.
-hello_cmake: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello_cmake
+# Convenience name for target.
+hello_cmake: app/CMakeFiles/hello_cmake.dir/rule
 .PHONY : hello_cmake
 
 # fast build rule for target.
 hello_cmake/fast:
-	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/hello_cmake.dir/build.make app/CMakeFiles/hello_cmake.dir/build
+	cd /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/hello_cmake.dir/build.make app/CMakeFiles/hello_cmake.dir/build
 .PHONY : hello_cmake/fast
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/hello_cmake.dir/build.make app/CMakeFiles/hello_cmake.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/hello_cmake.dir/build.make app/CMakeFiles/hello_cmake.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/hello_cmake.dir/build.make app/CMakeFiles/hello_cmake.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -151,7 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... hello_cmake"
-	@echo "... say_hello"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
@@ -163,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/xuy-kenbio/UbuntuCode/C-code/hello_cmake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
